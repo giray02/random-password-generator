@@ -1,0 +1,150 @@
+/* ROOT */
+
+:root {
+  --primary-color: #0c0b10;
+  --secondry-color: #24232a;
+  --succes-color: #a5ffaf;
+  --white: #fff;
+}
+
+/* RESET */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+button {
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 400;
+  color: var(--white);
+}
+
+.passGenerate {
+  max-width: 470px;
+  width: 96%;
+}
+
+.passGenerate .mainTitle {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 24px;
+  opacity: 0.7;
+}
+
+.passGenerate .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--secondry-color);
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+
+
+.passGenerate .header .passResult {
+  font-size: 24px;
+  color: var(--white);
+  background-color: transparent;
+  width: 100%;
+}
+
+.passGenerate .header .copy {
+  cursor: pointer;
+}
+
+.passGenerate .tooltip {
+  display: none;
+  align-items: center;
+  justify-content: flex-end;
+  color: green;
+  margin-bottom: 4px;
+}
+
+.passGenerate .header .copy i {
+  color: var(--succes-color);
+  font-size: 18px;
+}
+
+.passGenerate .content {
+  background-color: var(--secondry-color);
+  padding: 20px;
+  position: relative;
+}
+
+.passGenerate .content .character {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.passGenerate .content .character .title {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.passGenerate .content .character .lenght {
+  color: var(--succes-color);
+  font-size: 24px;
+}
+
+.passGenerate .content .settings .item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.passGenerate .content .power {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 24px 0px 0px 0px;
+  background-color: var(--primary-color);
+  padding: 20px 24px;
+}
+
+.passGenerate .content .power .status {
+  font-weight: 700;
+  transition: all 500ms;
+}
+
+.passGenerate .range {
+  appearance: none;
+  margin: 24px 0px;
+  height: 6px;
+  width: 100%;
+  background-color: var(--primary-color);
+}
+
+.passGenerate .range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: var(--white);
+  cursor: pointer;
+  border-radius: 50%;
+}

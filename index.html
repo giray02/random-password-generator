@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Random Password</title>
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="passGenerate">
+        <div class="mainTitle">Password Generator</div>
+        <span class="tooltip">Copy :)</span>
+        <div class="header">
+            <input type="text" class="passResult" id="passResult" value=""></input>
+            <div class="copy" id="copy">
+                <i class="fa-solid fa-copy"></i>
+            </div>
+        </div>
+        <div class="content">
+            <div class="character">
+                <div class="title">Character Lenght</div>
+                <div class="lenght" id="passLenght">0</div>
+            </div>
+
+            <input type="range" id="range"
+                oninput="createPassword(`${data.number+data.upperCase+data.lowerCase+data.symbol}`)" min="3" max="20"
+                class="range">
+
+            <div class="settings">
+                <div class="item">
+                    <input class="checkbox" id="upper" type="checkbox" checked>
+                    <label class="customcheckbox" for="checkbox"></label>
+                    <label>Include Uppercase Letters</label>
+                </div>
+                <div class="item">
+                    <input class="checkbox" id="lower" type="checkbox" checked>
+                    <label class="customcheckbox" for="checkbox"></label>
+                    <label>Include Lowercase Letters</label>
+                </div>
+                <div class="item">
+                    <input class="checkbox" id="number" type="checkbox" checked>
+                    <label class="customcheckbox" for="checkbox"></label>
+                    <label>Include Numbers</label>
+                </div>
+                <div class="item">
+                    <input class="checkbox" id="symbol" type="checkbox">
+                    <label class="customcheckbox" for="checkbox"></label>
+                    <label>Include Symbols</label>
+                </div>
+            </div>
+
+            <div class="power">
+                <div class="title">STRENGHT</div>
+                <div class="status" id="status"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
